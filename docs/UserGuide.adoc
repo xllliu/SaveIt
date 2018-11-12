@@ -734,6 +734,8 @@ e.g. `refactorTag t/java n/C++`
 * *History* : `history`
 * *Exit* : `exit`
 * *List* : `list`
-* *Sort* : `sort TYPE`
-* *Set Primary* : `setprimary [INDEX]`
+* *Sort* : `sort TYPE` +
+e.g. `sort chro`
+* *Set Primary* : `setprimary [INDEX]` +
+e.g. `setprimary 1`
 * *Reset Primary* : `resetprimary`
