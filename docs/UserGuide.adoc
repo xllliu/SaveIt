@@ -45,7 +45,6 @@ e.g. typing *`help`* and pressing kbd:[Enter] will open the help window.
 * *`exit`* : exits the app
 
 
-[[Features]]
 == Features
 The following is a list of commands that you can use in the application.
 
@@ -358,9 +357,8 @@ Examples: +
 * This command can only be executed in the home directory.
 ====
 
-
+// tag::find[]
 === Locating issues by statement: `(f)find`
-
 Finds issues whose statement contain any of the given search queries.
 
 Format: `find [KEYWORDS...]`
@@ -387,6 +385,9 @@ Examples:
 * Searching the keyword will increment the search frequency of the issue (so that it can be ordered accordingly later on).
 * This command can only be executed in the home directory.
 ====
+// end::find[]
+
+// tag::findtag[]
 
 === Locating issues by tags: `(ft)findtag`
 
@@ -413,6 +414,7 @@ Examples:
 e.g `issue[cplusplus][segmentation]` will match with a single searched tag `[cplusplus]`
 * This command can only be executed in the home directory.
 ====
+// end::findtag[]
 
 === Listing all issues : `(l)list`
 
@@ -629,6 +631,7 @@ Example:
 image::FindIssueAutoSuggestion.png[width="500"]
 // end::suggestion[]
 
+// tag::findbytagsuggestion[]
 === Autosuggesting existing tags in findByTag command
 
 To prevent the user from creating many similar tags / duplicates, whenever the user creates a record with a tag, or modifies a record’s tag, the application searches for similar tags in the system and prompts the user with a list of similar tags.
@@ -637,8 +640,9 @@ Example:
 
 .Autosuggesting of existing tags
 image::autosuggest-tag.png[width="600"]
+// end::findbytagsuggestion[]
 
-
+// tag::copyexistingsuggestion[]
 === Suggesting to copy existing values
 When editing fields in an issue (e.g. Editing an issue statement), if only slight modifications are required, the user will have to copy paste the existing issue statement and modify it, or type it out again.
 To make things more convenient, after the application prompts the user if they want to copy the existing value onto the command line.
@@ -647,6 +651,7 @@ Example:
 
 .Copying existing fields
 image::copy-existing.png[width="790"]
+// end::copyexistingsuggestion[]
 
 // tag::commandhighlight[]
 
@@ -711,11 +716,17 @@ For issues: `add i/[ISSUE_STATEMENT] d/[DESCRIPTION] t/[Tag]` +
 e.g. `add i/Bug d/exception thrown not handled t/java` +
 For solutions: `add s/[SOLUTION_LINK] r/[REMARK]` +
 e.g. `add s/www.github.com r/A git website`
+* *Set Primary* : `setprimary [INDEX]`
+* *Reset Primary* : `resetprimary`
 * *Edit* +
 For issues: `edit INDEX i/[ISSUE_STATEMENT] d/[DESCRIPTION]` +
 e.g. `edit 2 i/exception thrown not handled d/statement solved` +
 For solutions: `edit INDEX s/[SOLUTION_LINK] r/[REMARK]` +
 e.g. `edit 3 s/www.google.com r/add a catch block`
+* *Refactor Tag* : `refactortag t/OLDTAG [n/NEWTAG]` +
+e.g. `refactorTag t/java n/C++`
+* *Add Tag* : `addtag INDEX t/TAG1 [t/TAG2]...` +
+e.g. `addtag 2 t/python t/java t/TIL`
 * *Retrieve* : `retrieve INDEX` +
 For solutions: `retrieve SOLUTION_INDEX` +
 e.g. `retrieve 3`
@@ -723,19 +734,23 @@ e.g. `retrieve 3`
 e.g. `delete 3`
 * *Find* : `find KEYWORD [MORE_KEYWORDS]` +
 e.g. `find BST`
-* *Add Tag* : `addtag INDEX t/TAG1 [t/TAG2]...` +
-e.g. `addtag 2 t/python t/java t/TIL`
-* *Refactor Tag* : `refactortag t/OLDTAG [n/NEWTAG]` +
-e.g. `refactorTag t/java n/C++`
+* *Find Tag* : `findtag KEYWORD [MORE_KEYWORDS]` +
+e.g. `findtag python`
+* *List* : `list`
+* *Sort* : `sort TYPE`
 * *Home* : `home`
-* *Clear* : `clear`
 * *Undo* : `undo`
 * *Redo* : `redo`
+* *List* : `list`
+* *Clear* : `clear`
 * *History* : `history`
 * *Exit* : `exit`
+<<<<<<< HEAD
+=======
 * *List* : `list`
 * *Sort* : `sort TYPE` +
 e.g. `sort chro`
 * *Set Primary* : `setprimary [INDEX]` +
 e.g. `setprimary 1`
 * *Reset Primary* : `resetprimary`
+>>>>>>> 739dd62fe6193e5bb74c5ecfed53ba472df95053
