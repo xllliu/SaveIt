@@ -39,7 +39,7 @@ SaveIt is written in Java and JavaFX and is morphed from AddressBook-level4, the
 ** Project management:
 *** Manage milestones and checked issue status on GitHub
 ** Enhancements to existing features:
-*** Update tests to fit mid-v1.2 features (Pull requests https://github.com/CS2103-AY1819S1-T12-4/main/pull/52[#52])
+*** Update tests to fit mid-v1.2 features: https://github.com/CS2103-AY1819S1-T12-4/main/pull/52[#52]
 ** Documentation:
 *** Update About Us Page: https://github.com/CS2103-AY1819S1-T12-4/main/pull/2[#2]
 ** Community:

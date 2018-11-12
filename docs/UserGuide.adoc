@@ -138,13 +138,13 @@ Examples: +
 Adds a new issue which has a issue statment called `ArrayIndexOutOfBounds` and issue description called `issue description`
 
 .Add new issue to the issue list
-image::AddingNewIssue.png[width="500"]
+image::AddingNewIssue.png[width="700"]
 * `select 3`
 * `add s/www.stackoverflow.com r/use functional programming` +
 Adds a new solution which has a solution link called `www.stackoverflow.com` and a solution remark called `use functional programming`
 
 .Add new solution to the third issue in the issue list
-image::AddingNewSolution.png[width="500"]
+image::AddingNewSolution.png[width="700"]
 ****
 
 [NOTE]
@@ -740,3 +740,12 @@ e.g. `findtag python`
 * *Clear* : `clear`
 * *History* : `history`
 * *Exit* : `exit`
+<<<<<<< HEAD
+=======
+* *List* : `list`
+* *Sort* : `sort TYPE` +
+e.g. `sort chro`
+* *Set Primary* : `setprimary [INDEX]` +
+e.g. `setprimary 1`
+* *Reset Primary* : `resetprimary`
+>>>>>>> 739dd62fe6193e5bb74c5ecfed53ba472df95053
